@@ -1,0 +1,115 @@
+.game-container {
+    width: 650px;
+    height: 400px;
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    border: 6px solid rgb(192, 189, 189);
+    justify-content: space-between;
+}
+
+.question-container {
+    width: 50%;
+    margin-left: 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: -15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    padding: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    width: 50px;
+    transition: border-color 0.3s;
+}
+
+.square-row {
+    display: flex;
+    margin-left: auto;
+    margin-right: -250px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #32cd32;
+    margin: 4px;
+    opacity: 0;
+}
+
+.square.animate {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 360px;
+    background-color: #A9A9A9;
+    color: #fff;
+    margin-right: 280px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button.disabled {
+    cursor: not-allowed;
+}
+
+.button:hover:not(.disabled) {
+    background-color: #AFEEEE;
+}
+
+.button.right {
+    background-color: #228B22;
+}
+
+.button.right:hover {
+    background-color: #228B22; 
+}
+
+.button.wrong {
+    background-color: #FA8072;
+}
+
+.button.wrong:hover {
+    background-color: #e06666; 
+}
+
+.button.completed {
+    background-color: #32cd32;
+}
+
+.input-error {
+    color: #FA8072; 
+    animation: errorBlink 1s;
+    
+}
+
