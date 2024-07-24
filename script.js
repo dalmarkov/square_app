@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const example = generateExample(currentQuestionIndex);
             const questionElement = createQuestionElement(example);
             questionList.appendChild(questionElement);
-            questionList.appendChild(document.createElement('br')); // Новая строка для следующего вопроса
+            questionList.appendChild(document.createElement('br'));
         }
     }
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showButtonState(state) {
-        submitBtn.classList.remove('right', 'wrong', 'disabled'); // Удаляем предыдущие состояния
+        submitBtn.classList.remove('right', 'wrong', 'disabled');
         submitBtn.classList.add(state);
         setTimeout(() => {
             submitBtn.classList.remove(state);
